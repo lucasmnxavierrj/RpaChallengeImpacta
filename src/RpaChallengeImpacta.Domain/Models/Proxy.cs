@@ -14,41 +14,7 @@ namespace RpaChallengeImpacta.Domain.Models
         {
             Id = Guid.NewGuid();
         }
-        public Proxy(
-            string protocolType, 
-            string ipAddress, 
-            int port, 
-            string country, 
-            string anonymity, 
-            bool isHttps, 
-            double latency, 
-            double lastChecked)
-        {
-            Id = Guid.NewGuid();
-            ProtocolType = protocolType switch
-            {
-                "http" => EProtocolType.Http,
-                "socks4" => EProtocolType.Socks4,
-                _ => throw new Exception("Unexpected protocol type")
-            };
-            IpAddress = ipAddress;
-            Port = port.ToString();
-            Country = country;
-            Anonymity = anonymity switch
-            {
-                "elite" => EAnonymity.Elite,
-                "anonymous" => EAnonymity.Anonymous,
-                "transparent" => EAnonymity.Transparent,
-                _ => throw new Exception("Unexpected anonymity type")
-            };
-            IsHttps = isHttps switch
-            {
-                true => ETrueFalse.True,
-                false => ETrueFalse.False,
-            };
-            Latency = $"{double.Round(latency)}ms" ;
-            LastChecked = 0;
-        }
+
         public Guid Id { get; set; }
         public EProtocolType ProtocolType { get; set; }
         public string IpAddress { get; set; }

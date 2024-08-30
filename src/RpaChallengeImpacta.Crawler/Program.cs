@@ -1,6 +1,8 @@
-﻿using RpaChallengeImpacta.Crawler.UseCases;
+﻿using RpaChallengeImpacta.Crawler.UseCases.ProxyCases;
 
-await GetProxyDataFromProxyScape.Run();
+var proxyData = await GetProxyDataFromProxyScape.Run();
+
+await SaveProxyDataIntoDatabase.Save(proxyData);
 
 
 

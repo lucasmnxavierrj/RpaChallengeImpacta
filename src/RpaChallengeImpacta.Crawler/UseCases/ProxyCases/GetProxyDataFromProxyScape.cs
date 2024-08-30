@@ -11,34 +11,43 @@ using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Net.Http.Json;
 
-namespace RpaChallengeImpacta.Crawler.UseCases
+namespace RpaChallengeImpacta.Crawler.UseCases.ProxyCases
 {
     internal static class GetProxyDataFromProxyScape
     {
         private static readonly string _siteUrl = "https://pt-br.proxyscrape.com/lista-de-procuradores-gratuitos";
-        public static async Task Run()
+        public static async Task<List<ProxyDto>> Run()
         {
-            using var driver = new ChromeDriver();
+            try
+            {
+                using var driver = new ChromeDriver();
 
-            driver.Navigate().GoToUrl(_siteUrl);
-            
-            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+                driver.Navigate().GoToUrl(_siteUrl);
 
-            var jsonButton = wait.Until(driver =>
-                driver.FindElement(By.XPath("//button[small[text()='json']]"))
-            );
+                var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
 
-            ScrollToElement(driver, jsonButton);
+                var jsonButton = wait.Until(driver =>
+                    driver.FindElement(By.XPath("//button[small[text()='json']]"))
+                );
 
-            jsonButton.Click();
+                ScrollToElement(driver, jsonButton);
 
-            var downloadButton = wait.Until(driver =>
-                driver.FindElement(By.XPath("//button[small[text()='Download']]")));
-            downloadButton.Click();
+                jsonButton.Click();
 
-            await Task.Delay(3000);
+                var downloadButton = wait.Until(driver =>
+                    driver.FindElement(By.XPath("//button[small[text()='Download']]")));
+                downloadButton.Click();
 
-            var fileData = GetFileData();
+                await Task.Delay(3000);
+
+                var fileData = GetFileData();
+
+                return fileData;
+            }
+            catch (Exception ex)
+            {
+                return [];
+            }
         }
 
         #region Private Methods
@@ -64,7 +73,7 @@ namespace RpaChallengeImpacta.Crawler.UseCases
 
                 return fileContentDto;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return [];
             }

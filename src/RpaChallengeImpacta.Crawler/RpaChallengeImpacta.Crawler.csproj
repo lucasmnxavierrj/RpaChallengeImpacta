@@ -13,4 +13,8 @@
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="128.0.6613.8600" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RpaChallengeImpacta.Domain\RpaChallengeImpacta.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

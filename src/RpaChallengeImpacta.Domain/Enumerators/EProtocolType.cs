@@ -9,6 +9,7 @@ namespace RpaChallengeImpacta.Domain.Enumerators
     public enum EProtocolType
     {
         Http,
-        Socks4
+        Socks4,
+        Socks5,
     }
 }
