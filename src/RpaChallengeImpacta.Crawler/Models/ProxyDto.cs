@@ -70,6 +70,5 @@ namespace RpaChallengeImpacta.Crawler.Models
                 LastChecked = 0,
             };
         }
-
     }
 }
