@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RpaChallengeImpacta.Crawler", "src\RpaChallengeImpacta.Crawler\RpaChallengeImpacta.Crawler.csproj", "{1D61A494-8687-41A1-ACC9-3CE1289FF496}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BD433840-CA11-42F4-9234-3443A9811E89} = {BD433840-CA11-42F4-9234-3443A9811E89}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RpaChallengeImpacta.API", "src\RpaChallengeImpacta.API\RpaChallengeImpacta.API.csproj", "{9B51712B-0565-4D15-853A-AA711E71C627}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4785A598-0A76-407D-B3C1-7DA2481745D2} = {4785A598-0A76-407D-B3C1-7DA2481745D2}
+		{BD433840-CA11-42F4-9234-3443A9811E89} = {BD433840-CA11-42F4-9234-3443A9811E89}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RpaChallengeImpacta.Domain", "src\RpaChallengeImpacta.Domain\RpaChallengeImpacta.Domain.csproj", "{BD433840-CA11-42F4-9234-3443A9811E89}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RpaChallengerImpacta.DataAccess", "src\RpaChallengerImpacta.DataAccess\RpaChallengerImpacta.DataAccess.csproj", "{4785A598-0A76-407D-B3C1-7DA2481745D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D61A494-8687-41A1-ACC9-3CE1289FF496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D61A494-8687-41A1-ACC9-3CE1289FF496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D61A494-8687-41A1-ACC9-3CE1289FF496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D61A494-8687-41A1-ACC9-3CE1289FF496}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B51712B-0565-4D15-853A-AA711E71C627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B51712B-0565-4D15-853A-AA711E71C627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B51712B-0565-4D15-853A-AA711E71C627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B51712B-0565-4D15-853A-AA711E71C627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD433840-CA11-42F4-9234-3443A9811E89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD433840-CA11-42F4-9234-3443A9811E89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD433840-CA11-42F4-9234-3443A9811E89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD433840-CA11-42F4-9234-3443A9811E89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4785A598-0A76-407D-B3C1-7DA2481745D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4785A598-0A76-407D-B3C1-7DA2481745D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4785A598-0A76-407D-B3C1-7DA2481745D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4785A598-0A76-407D-B3C1-7DA2481745D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7AAB6D3C-37A7-462D-8DF3-4180C1AC6F48}
+	EndGlobalSection
+EndGlobal
