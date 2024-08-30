@@ -5,6 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RpaChallengeImpacta.Crawler", "src\RpaChallengeImpacta.Crawler\RpaChallengeImpacta.Crawler.csproj", "{1D61A494-8687-41A1-ACC9-3CE1289FF496}"
 	ProjectSection(ProjectDependencies) = postProject
+		{4785A598-0A76-407D-B3C1-7DA2481745D2} = {4785A598-0A76-407D-B3C1-7DA2481745D2}
 		{BD433840-CA11-42F4-9234-3443A9811E89} = {BD433840-CA11-42F4-9234-3443A9811E89}
 	EndProjectSection
 EndProject
